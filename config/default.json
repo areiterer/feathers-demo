@@ -1,0 +1,12 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "mongodb": "mongodb://raspi:27017/feathersDemo",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "WblyyCKFimeIjqjjRDr7ZKQ7/iw7Y2QDsP+y1HTSKAsbd4ifarAoF2aQnVpWM4dnza+hIY7BhoIAZDYDZP+Zgw=="
+    },
+    "local": {}
+  }
+}
