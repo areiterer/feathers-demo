@@ -1,57 +1,17 @@
 # feathers-demo
 
-> Demo FeathersJS backend with authentication
+This is a small demo application which is the backend to my [react-auth-demo](https://github.com/areiterer/react-auth-demo) project.
+ 
+# Agenda / Roadmap
 
-## About
+* [x] There is an /article route to CRUD articles, it is only usable by authenticated users
+* [x] Use the /signup middleware to register new users.
+* [ ] It should be possible to put users into roles and restrict some actions to certain roles.
+* [ ] To be continued ...
 
-This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
+# Contribution
+All kinds of contribution are welcome. If you have ideas or found some errors or bad design, please add an issue or 
+send a PR.
 
-## Getting Started
-
-Getting up and running is as easy as 1, 2, 3.
-
-1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
-2. Install your dependencies
-    
-    ```
-    cd path/to/feathers-demo; npm install
-    ```
-
-3. Start your app
-    
-    ```
-    npm start
-    ```
-
-## Testing
-
-Simply run `npm test` and all your tests in the `test/` directory will be run.
-
-## Scaffolding
-
-Feathers has a powerful command line interface. Here are a few things it can do:
-
-```
-$ npm install -g feathers-cli             # Install Feathers CLI
-
-$ feathers generate service               # Generate a new Service
-$ feathers generate hook                  # Generate a new Hook
-$ feathers generate model                 # Generate a new Model
-$ feathers help                           # Show all commands
-```
-
-## Help
-
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
-
-## Changelog
-
-__0.1.0__
-
-- Initial release
-
-## License
-
-Copyright (c) 2016
-
-Licensed under the [MIT license](LICENSE).
+# Contact
+If you have questions, please contact me on Twitter: [@a_reiterer](https://twitter.com/a_reiterer)
