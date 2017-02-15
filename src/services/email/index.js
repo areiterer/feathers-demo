@@ -5,7 +5,7 @@ const hooks = require('./hooks');
 const Mailer = require('feathers-mailer');
 const smtpTransport = require('nodemailer-smtp-transport');
 
-module.exports = function(){
+module.exports = function () {
   const app = this;
 
   // Initialize our service with any options it requires
@@ -16,6 +16,10 @@ module.exports = function(){
     auth: {
       user: process.env.MAIL,
       pass: process.env.MAIL_PASSWD
+    },
+    tls: {
+      // do not fail on invalid certs
+      rejectUnauthorized: false
     }
   })));
 

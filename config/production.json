@@ -3,6 +3,8 @@
   "port": 80,
   "mongodb": "DATABASE_URL",
   "public": "../public/",
+  "protocol": "http",
+  "src": "/var/www/feathers-demo",
   "auth": {
     "token": {
       "secret": "FEATHERS_AUTH_SECRET"

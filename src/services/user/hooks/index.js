@@ -4,6 +4,8 @@ const globalHooks = require('../../../hooks');
 const hooks = require('feathers-hooks');
 const auth = require('feathers-authentication').hooks;
 
+const verifyHooks = require('feathers-authentication-management').hooks;
+
 exports.before = {
   all: [],
   find: [
@@ -18,7 +20,8 @@ exports.before = {
     auth.restrictToOwner({ ownerField: '_id' })
   ],
   create: [
-    auth.hashPassword()
+    auth.hashPassword(),
+    verifyHooks.addVerification()
   ],
   update: [
     auth.verifyToken(),
@@ -44,7 +47,12 @@ exports.after = {
   all: [hooks.remove('password')],
   find: [],
   get: [],
-  create: [],
+  create: [
+    // custom hook to send verification emails
+    globalHooks.sendVerificationEmail(),
+
+    // removes verification/reset fields other than .isVerified
+    verifyHooks.removeVerification(),],
   update: [],
   patch: [],
   remove: []
